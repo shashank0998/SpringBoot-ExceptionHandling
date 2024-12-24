@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/cloud_vendor?useSSL=false
+    name: test
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        show_sql: true
+        format_sql: true
+    #JPA Settings
+  jpa.hibernate.ddl_auto: update
+  
+#  management:
+#    endpoints:
+#    web:
+#      exposure:
+#        include: "health, beans, metrics"
+#      base-path: "/management-dashboard"
+#  endpoint:
+#     health:
+#      show-details: always
+#      
+#  dummyService:
+#    port: 8081
+#    address: 127.0.0.1
